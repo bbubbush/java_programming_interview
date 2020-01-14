@@ -1,6 +1,8 @@
 # JAVA 프로그래밍 면접, 이렇게 준비한다
 
-#### INDEX
+[![bbubbush](https://img.shields.io/static/v1?logo=GitHub&label=Cteator&message=bbubbush&color=lightgrey)](https://github.com/bbubbush)
+
+## INDEX
 
 ### [01  면접 유형 살펴보기](#면접-유형-살펴보기)
 
