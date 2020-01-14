@@ -28,6 +28,6 @@ public void stringIntern() {
 
 테스트 결과를 보자. 1번과 2번은 크게 놀랍진 않다. 그러나 4번의 결과가 true인 것은 조금 놀랍다. 이것이 인터닝이다. literal의 리터럴이 존재하는 상수 풀에서 가리키는 데이터를 intern 객체가 그대로 가져가 사용하는 것이다. 조금 더 상세히 설명하자면 literal 객체가 생성 될 때, 값인 "Hello"를 Permanent Generation(줄여서 PermGen) 영역 내 상수 풀에 데이터를 넣는다. intern 객체가 literal.intern()을 통해 생성이 되는데 이때 인터닝이 발생하게 되어 동일한 값을 바라보는 객체가 된다. 
 
-![JVM 구조](./JVM 구조.png)
+![JVM 구조](docs/자바%20기본//JVM%20구조.png)
 
 Constant Pool은 Method Area 내에 존재한다.
