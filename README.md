@@ -2,7 +2,7 @@
 
 [![bbubbush](https://img.shields.io/static/v1?logo=GitHub&label=Cteator&message=bbubbush&color=lightgrey)](https://github.com/bbubbush)
 
-[책정보](https://www.notion.so/bbubbush/JAVA-9a2ed3ccf9604ee6adebdbcc69d83798)
+[이 책에 대하여](https://www.notion.so/bbubbush/JAVA-9a2ed3ccf9604ee6adebdbcc69d83798)
 ---
 
 ## INDEX
