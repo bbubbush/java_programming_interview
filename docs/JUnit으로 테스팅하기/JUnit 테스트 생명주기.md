@@ -16,6 +16,19 @@ JUnit의 생명주기를 알면 JUnit의 동작원리를 알 수 있다. 먼저 
 
 괄호는 JUnit5의 문법을 나타내므로 참고하길 바란다. 가장 중요한 어노테이션은 @Test 이다. 각 @Test 별로 테스트가 동작하고, 어떤 테스트를 하는지 한눈에 확인 할 수 있다.
 
-만약 테스트 전에 필수로 실행해야 할 프로세스가 있다면 @Before를, 테스트 후에 해야할 업무가 있다면 @After를 사용하면 된다.
+만약 테스트 전에 필수로 실행해야 할 프로세스가 있다면 @Before를, 테스트 후에 해야할 업무가 있다면 @After를 사용하면 된다. 다만 주의해야할 내용은 모든 @Test 메서드는 독립적으로 @Before, @After를 실행한다. 아래 그림의 노란 사각형의 영역에 해당한다. 반대로 흰 테두리의 @BeforeClass와 @AfterClass는 딱 한번만 호출됨을 명심해야한다.
 
 ![JUnit의 생명주기](./JUnit_LifeCycle.PNG)
+
+추가적으로 **@Before, @After, @Test가 여러개일 경우, 실행 순서는 순서에 의존되지 않는다.** @Before를 사용한 메서드가 5개라고 해도 이들의 순서는 보장되지 않는다는 의미이다. 이는 각 테스트가 서로 독립적이며, 원자성을 갖음을 보장하기 위한 것이다.
+
+
+
+##### 결론 : JUnit에는 생명주기가 있다. @BeforeClass부터 @AfterClass의 동작 원리를 이해한다면 전체적인 흐름에 대해 감을 잡을 수 있다. 다만 동일한 어노테이션이 반복된다면, 그들간의 순서는 보장받지 못하는 것을 유의해야 한다. 이것은 각 테스트가 최소 단위로 진행된다는 것을 전제하기 때문이다. 자세한 내용은 아래 링크를 통해 참고하기 바란다.
+
+[JUnit4 Doc](https://junit.org/junit4/javadoc/latest/)
+
+[JUnit5 Doc](https://junit.org/junit5/docs/current/user-guide/#writing-tests-annotations)
+
+
+
