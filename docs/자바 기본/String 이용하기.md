@@ -20,7 +20,7 @@ public void stringIntern() {
   final String intern = literal.intern();  // 리터럴의 인턴
   
   Assert.assertTrue(literal.equals(object)); // true
-  Assert.assertTrue(literal == object);  // false
+  Assert.assertFalse(literal == object);  // false
   Assert.assertTrue(literal.equals(intern));  // true
   Assert.assertTrue(literal == intern);  // true
 }
